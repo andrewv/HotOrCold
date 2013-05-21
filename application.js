@@ -27,7 +27,7 @@ $(document).ready(function() {
 			}
 		}
 		else {
-			if (guess = num) {
+			if (guess == num) {
 			$('#canvas-main').find('h3').text("GOT IT!");
 			var HTMLInsert = "<p>" + guess + "GOT IT!!</p>";
 				$(HTMLInsert).insertAfter('h2');
@@ -48,7 +48,8 @@ $(document).ready(function() {
 			console.log("Colder!");
 			$('#canvas-main').find('h3').text("Getting Colder");
 			document.getElementById('bg').style.background = '-webkit-radial-gradient(50% 50%, ellipse, #000066, #0000CC)';
-			$('<p>colder</p>').insertAfter('h2');
+			var HTMLInsert = "<p>" + guess + " - Colder!</p>";
+			$(HTMLInsert).insertAfter('h2');
 		}
 	
 		}
